@@ -12,6 +12,8 @@ View what I learned from CS106B.
 
 - **precedence and associativity** 对于同一个操作数，若其参与了不同的运算符的运算，将先由高 precedence 的运算符使用，如果两个运算符的优先级一样，那么则有他们的 associativity 来决定是从左向右运算还是从右向左运算。
 
+- **>>操作符** >>操作符一旦遇到空白符就会结束，空白操作符包括空格,tab，回车。
+
 ##### 数据类型
 
 - 一个数据类型包含两方面，数据范围和操作集合。
@@ -47,6 +49,8 @@ switch (e) {
 
 ##### function
 
+- **Basic** ①C++的函数只允许一个返回值
+
 - **function prototype**在 C++中，代码是逐行编译的，因此如果函数的定义写到函数调用之后了，那么就需要在前面进行函数断言，函数断言由函数的第一行加上分号组成。
 
 - **function overloading** 同样的函数名称，但是参数的数量/类型有不同这在 C++中是允许的，这被称为函数重载，一般用来对不同的参数执行类似的操作。
@@ -61,3 +65,17 @@ void foo(int& n)
    n++;
 }
 ```
+
+##### String
+
+- **Basic** ①String 实际上就是一个数组，包含一系列的 char② 可以使用+来连接两个 String 或 String 和 char③String 可以通过索引调用，且在 C++中 String 是可变的，即可以修改其单个元素
+
+- **特殊的 loop 方式**
+
+```C++
+for (char ch: s){
+    cout << ch;
+}
+```
+
+- **两种字符串** string literal 其实是 C 风格的字符串，而使用 string var = xxx 得到的是 C++风格的字符串。任何字符串的操作，当操作数的某一方是 C++风格的字符串时，是安全的。
